@@ -1,0 +1,9 @@
+CREATE TABLE requestor_Details (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    requestor_Name VARCHAR(100),
+    requestor_Email VARCHAR(100),
+    requestor_Desc VARCHAR(MAX),
+    state VARCHAR(50),
+    city VARCHAR(50),
+    pincode VARCHAR(10)
+);

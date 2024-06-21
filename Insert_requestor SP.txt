@@ -1,0 +1,30 @@
+USE [job]
+GO
+/****** Object:  StoredProcedure [dbo].[insert_RequesterDetails]    Script Date: 21-06-2024 11:54:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[insert_RequesterDetails] 
+
+@requestor_Name varchar(50),
+@requestor_Email varchar(50),
+@requestor_Desc varchar(max),
+@state varchar(50),
+@city varchar(50),
+@pincode int
+
+AS
+ BEGIN
+ INSERT INTO requestor_Details VALUES (
+ @requestor_Name,
+@requestor_Email,
+@requestor_Desc,
+@state,
+@city,
+@pincode)
+
+BEGIN
+SELECT * FROM requestor_Details
+END
+END
